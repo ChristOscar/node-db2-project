@@ -27,6 +27,7 @@ router.get('/:id', checkCarId, (req, res, next)=>{
     .catch(next)
 });
 
+// eslint-disable-next-line no-unused-vars
 router.use((err, req, res, next)=>{
     res.status(err.status || 500).json({
         custom: 'Something happened in the cars-router',
